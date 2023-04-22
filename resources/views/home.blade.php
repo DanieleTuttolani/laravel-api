@@ -3,17 +3,32 @@
 @section('content')
     @section('c-content')
         {{-- intestazioni presentazioni e foto --}}
-        <div class="struttura-genitore titolo d-flex my-4">
+        <div class="struttura-genitore presentazione titolo d-flex my-4">
             <div class="img-pit struttura">
                 <div class="img-wrapper struttura">
                     <img class="img-fluid" src="https://www.petme.it/wp-content/uploads/2022/07/Schermata-2022-07-14-alle-17.50.21.png" alt="">
                 </div>
             </div>
             <div class="desc-wrapper col-5 struttura text-light p-4">
-                <div class="name"><h1>Daniele Tuttolani</h1></div>
-                <div class="desc"><p>Atri Abruzzo Italia</p></div>
+                <div><h1>Daniele Tuttolani</h1></div>
+                <div class="desc"><p>Atri/Abruzzo/Italia</p></div>
             </div>
-            <div class="info wrapper struttura p-4"><h4>Al momento impiegato in nesun progetto</h4></div>
+            <div class="pit">
+                <div class="info wrapper px-5 py-3 d-flex h-100">
+                    {{-- link git hub --}}
+                    <h4>
+                        <a href="https://github.com/DanieleTuttolani">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </h4>
+                    {{-- link linkedin --}}
+                    <h4>
+                        <a href="https://www.linkedin.com/in/daniele-tuttolani-3304ba26b/">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </h4>
+                </div>
+            </div>
         </div>
         {{-- vetrina progetti --}}
         <section class="projects d-flex">
@@ -25,11 +40,10 @@
                         </div>
                         @forelse ($projects as $project)
                         <div class="project-body struttura mb-3 p-3">
-                            <img class="img-fluid" src="{{asset('storage/'.$project->img)}}" alt="">
+                            <img class="img-fluid" src="{{asset('storage/'.$project->img)}}" alt="immagine progetto">
                             <hr class="border-light">
                             <div class="text-wrapper text-light">
                                 <div class="col-6"><h4>Sogetto : {{$project->title}} </h4></div>
-                                <div class="col-6"><h4>Collaboratori : {{$project->collab}}</h4></div>
                                 <div class="col"><h4>Descrizione : {{$project->description}}</h4></div>
                             </div>
                         </div>

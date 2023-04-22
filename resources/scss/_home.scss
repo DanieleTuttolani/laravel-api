@@ -11,6 +11,27 @@
 .struttura{
     min-height: 150px;
 }
+.pit{
+    background-color: rgba(0, 0, 0, 0.541);
+}
+//intestazioni presentazioni e foto
+.name{
+    color: #00adee;
+}
+.presentazione{
+    .pit{
+        height: 100px;
+        h4{
+            padding: 15px;
+            scale: 1.6;
+            margin: 0;
+
+        }
+    }
+    .info{
+        align-items: center;
+    }
+}
 
 // vetrina
 .projects{
